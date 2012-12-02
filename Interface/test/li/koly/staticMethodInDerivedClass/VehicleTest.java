@@ -2,6 +2,9 @@ package li.koly.staticMethodInDerivedClass;
 
 import org.junit.Test;
 
+import static org.hamcrest.core.Is.is;
+import static org.junit.Assert.assertThat;
+
 /**
  * Created with IntelliJ IDEA.
  * User: twer
@@ -12,7 +15,7 @@ import org.junit.Test;
 public class VehicleTest {
     @Test
     public void test(){
-        Car.printName(new Car());
+        assertThat(Car.printName(new Car()), is("Hello, I am A Car!"));
     }
 
 }

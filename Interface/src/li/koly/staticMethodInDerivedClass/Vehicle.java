@@ -8,4 +8,5 @@ package li.koly.staticMethodInDerivedClass;
  * To change this template use File | Settings | File Templates.
  */
 public abstract class Vehicle {
+    public abstract String print();
 }

@@ -9,11 +9,12 @@ package li.koly.staticMethodInDerivedClass;
  */
 public class Car extends Vehicle {
 
-    public static void printName(Vehicle theVehicle){
-        ((Car)theVehicle).print();
+    public static String printName(Vehicle theVehicle){
+        return theVehicle.print();
     }
 
-    private void print() {
-        System.out.println("Hello, my name is car");
+    @Override
+    public String print() {
+        return "Hello, I am A Car!";
     }
 }
