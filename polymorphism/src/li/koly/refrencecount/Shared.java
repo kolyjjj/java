@@ -35,8 +35,20 @@ public class Shared{
             return "shared: " + id;
         }
 
+        protected void finalize(){
+            System.out.println("hello, i am the finalize!");
+            if(count != 0)
+                System.out.println("Not clean cleared!");
+            System.out.println();
+
+        }
 
         public static void clear() {
             count = 0;
+        }
+
+        public String dispose() {
+            count--;
+            return "shared "+ id + " disposed,count:" + count;
         }
     }
