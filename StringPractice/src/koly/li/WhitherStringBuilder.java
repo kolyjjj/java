@@ -15,4 +15,6 @@ public class WhitherStringBuilder {
         }
         return result.toString();
     }
+
+    //what's the difference between the previous two methods
 }
