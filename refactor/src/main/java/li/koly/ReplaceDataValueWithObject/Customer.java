@@ -25,7 +25,8 @@ public class Customer {
         return name;
     }
 
+    // should consider the case non object is found
     public static Customer create(String name){
-        return new Customer(name);
+        return (Customer) instances.get(name);
     }
 }
