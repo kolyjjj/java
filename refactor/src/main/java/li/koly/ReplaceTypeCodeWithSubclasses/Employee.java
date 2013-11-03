@@ -7,10 +7,13 @@ public class Employee {
     static final int MANAGER = 2;
 
     public static Employee create(int type){
-        return new Employee(type);
+        if (type == ENGINEER) return new Engineer();
+        if (type == SALESMAN) return new Salesman();
+        if (type == MANAGER) return new Manager();
+        throw new RuntimeException("no such employee");
     }
 
-    private Employee(int type){
+    protected Employee(int type){
         this.type = type;
     }
 
