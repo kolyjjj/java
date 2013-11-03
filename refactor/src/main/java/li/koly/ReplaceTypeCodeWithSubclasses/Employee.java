@@ -1,7 +1,6 @@
 package li.koly.ReplaceTypeCodeWithSubclasses;
 
-public class Employee {
-    private int type;
+public abstract class Employee {
     static final int ENGINEER = 0;
     static final int SALESMAN = 1;
     static final int MANAGER = 2;
@@ -13,11 +12,6 @@ public class Employee {
         throw new RuntimeException("no such employee");
     }
 
-    protected Employee(int type){
-        this.type = type;
-    }
 
-    int getType(){
-        return this.type;
-    }
+    public abstract int getType();
 }
