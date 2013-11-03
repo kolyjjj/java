@@ -6,12 +6,17 @@ public abstract class Employee {
     static final int MANAGER = 2;
 
     public static Employee create(int type){
-        if (type == ENGINEER) return new Engineer();
-        if (type == SALESMAN) return new Salesman();
-        if (type == MANAGER) return new Manager();
-        throw new RuntimeException("no such employee");
+        switch (type){
+            case ENGINEER:
+                return new Engineer();
+            case SALESMAN:
+                return new Salesman();
+            case MANAGER:
+                return new Manager();
+            default:
+                throw new RuntimeException("no Such Employee");
+        }
     }
-
 
     public abstract int getType();
 }
