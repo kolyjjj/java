@@ -10,10 +10,11 @@ public class EmployeeTest {
 
     @Test
     public void should_use_employee(){
-        Employee employee = Employee.create(0);
-        People koly = new People("koly", 26, "male", employee);
-        koly.upgrade();
+        Employee employee = Employee.create("koly", "male", 0);
+        employee = employee.upgrade();
 
-        assertThat(koly.getOccupation() instanceof Manager, is(true));
+        assertThat(employee instanceof Manager, is(true));
+        assertThat(employee.getName(), is("koly"));
+        assertThat(employee.getGender(), is("male"));
     }
 }
