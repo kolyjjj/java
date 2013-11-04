@@ -6,4 +6,9 @@ public class Engineer extends Employee {
         return Employee.ENGINEER;
     }
 
+    @Override
+    public Employee upgrade() {
+        return Employee.create(2);
+    }
+
 }
