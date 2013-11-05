@@ -9,10 +9,10 @@ public class Account {
     }
 
     public double getInterest() {
-        return interest;
+        return type.getInterestRate();
     }
 
     public void setInterest(double interest) {
-        this.interest = interest;
+        type.setInterestRate(interest);
     }
 }
