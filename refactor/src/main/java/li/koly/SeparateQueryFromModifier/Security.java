@@ -3,20 +3,17 @@ package li.koly.SeparateQueryFromModifier;
 public class Security {
     //this method is doing two things, the first one is returning a string, which is
     //the main responsibility, the sencond is to send alert, which is the 'side effect'
-    String foundMiscreant(String[] people){
+    void foundMiscreant(String[] people){
         for (int i = 0; i < people.length; i++){
             if (people[i].equals("Don")){
                 sendAlert();
-                return foundPerson(people);
+                return;
             }
             if (people[i].equals("John")){
                 sendAlert();
-                return foundPerson(people);
+                return;
             }
         }
-        //since the return value is the result of the Query method,
-        //so it's natural to substitute the returning value
-        return foundPerson(people);
     }
 
     String foundPerson(String[] people){
