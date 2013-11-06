@@ -7,17 +7,19 @@ public class Security {
         for (int i = 0; i < people.length; i++){
             if (people[i].equals("Don")){
                 sendAlert();
-                return "Don";
+                return foundPerson(people);
             }
             if (people[i].equals("John")){
                 sendAlert();
-                return "John";
+                return foundPerson(people);
             }
         }
-        return "";
+        //since the return value is the result of the Query method,
+        //so it's natural to substitute the returning value
+        return foundPerson(people);
     }
 
-    String foundMiscreant1(String[] people){
+    String foundPerson(String[] people){
         for (int i = 0; i < people.length; i++){
             if (people[i].equals("Don")){
                 return "Don";
