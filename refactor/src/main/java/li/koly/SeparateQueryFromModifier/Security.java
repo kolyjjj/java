@@ -36,7 +36,8 @@ public class Security {
     }
 
     public void checkSecurity(String[] people){
-        String found = foundMiscreant(people);
+        foundMiscreant(people);
+        String found = foundPerson(people);
         someLaterCode(found);
     }
 
