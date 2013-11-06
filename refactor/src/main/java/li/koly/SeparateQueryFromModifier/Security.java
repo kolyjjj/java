@@ -3,7 +3,7 @@ package li.koly.SeparateQueryFromModifier;
 public class Security {
     //this method is doing two things, the first one is returning a string, which is
     //the main responsibility, the sencond is to send alert, which is the 'side effect'
-    void foundMiscreant(String[] people){
+    void sendALert(String[] people){
         for (int i = 0; i < people.length; i++){
             if (people[i].equals("Don")){
                 sendAlert();
@@ -33,7 +33,7 @@ public class Security {
     }
 
     public void checkSecurity(String[] people){
-        foundMiscreant(people);
+        sendALert(people);
         String found = foundPerson(people);
         someLaterCode(found);
     }
