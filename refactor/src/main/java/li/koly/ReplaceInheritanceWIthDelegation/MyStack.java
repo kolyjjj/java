@@ -5,12 +5,12 @@ public class MyStack extends Vector {
     private Vector vector = this;
 
     public void push(Object element){
-        insertElementAt(element, 0);
+        vector.insertElementAt(element, 0);
     }
 
     public Object pop(){
-        Object result = firstElement();
-        removeElementAt(0);
+        Object result = vector.firstElement();
+        vector.removeElementAt(0);
         return result;
     }
 }
