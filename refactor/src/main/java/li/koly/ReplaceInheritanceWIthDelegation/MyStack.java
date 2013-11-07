@@ -1,8 +1,8 @@
 package li.koly.ReplaceInheritanceWIthDelegation;
 
-public class MyStack extends Vector {
+public class MyStack{
 
-    private Vector vector = this;
+    private Vector vector = new Vector();
 
     public void push(Object element){
         vector.insertElementAt(element, 0);
