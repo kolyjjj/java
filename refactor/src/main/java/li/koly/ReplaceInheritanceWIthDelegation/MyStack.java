@@ -2,6 +2,8 @@ package li.koly.ReplaceInheritanceWIthDelegation;
 
 public class MyStack extends Vector {
 
+    private Vector vector = this;
+
     public void push(Object element){
         insertElementAt(element, 0);
     }
