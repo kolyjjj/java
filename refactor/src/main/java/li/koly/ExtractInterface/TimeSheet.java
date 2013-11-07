@@ -1,7 +1,7 @@
 package li.koly.ExtractInterface;
 
 public class TimeSheet {
-    double charge(Employee emp, int days){
+    double charge(Billable emp, int days){
         int base = emp.getRate() * days;
         if (emp.hasSpecialSkill()){
             return base * 1.05;
