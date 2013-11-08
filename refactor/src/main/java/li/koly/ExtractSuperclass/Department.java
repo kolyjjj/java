@@ -1,11 +1,9 @@
 package li.koly.ExtractSuperclass;
 
 import java.util.ArrayList;
-import java.util.Enumeration;
 import java.util.List;
-import java.util.Vector;
 
-public class Department {
+public class Department extends Party{
     private final String name;
     private List<Employee> staff = new ArrayList();
 
@@ -26,7 +24,7 @@ public class Department {
         return staff;
     }
 
-    public int getHeadCount(){
+    public int getHeadCount() {
         return staff.size();
     }
 

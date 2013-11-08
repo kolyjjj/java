@@ -1,6 +1,6 @@
 package li.koly.ExtractSuperclass;
 
-public class Employee {
+public class Employee extends Party{
 
     private final String name;
     private final String id;
