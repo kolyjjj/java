@@ -17,7 +17,7 @@ public class JobItem {
         return getUnitPrice() * quantity;
     }
 
-
+    // here isLabor is a type code
     public int getUnitPrice() {
         return isLabor ? employee.getRate() : unitPrice;
     }
