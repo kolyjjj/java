@@ -1,7 +1,14 @@
 package li.koly.ExtractSubclass;
 
 public class LaborItem extends JobItem {
-    public LaborItem(int unitPrice, int quantity, Employee employee, boolean labor) {
-        super(unitPrice, quantity, employee, labor);
+    private Employee employee;
+
+    public LaborItem(int quantity, Employee employee) {
+        super(0, quantity, employee, true);
+    }
+
+
+    public Employee getEmployee() {
+        return employee;
     }
 }
