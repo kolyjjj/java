@@ -10,4 +10,6 @@ public abstract class Party {
     public String getName() {
         return name;
     }
+
+    public abstract int getAnnualCost();
 }

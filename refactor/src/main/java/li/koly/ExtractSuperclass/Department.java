@@ -10,7 +10,7 @@ public class Department extends Party{
         super(name);
     }
 
-    public int getTotalAnnualCost() {
+    public int getAnnualCost() {
         List<Employee> e = getStaff();
         int result = 0;
         for (Employee employee : e) {
