@@ -12,4 +12,8 @@ public class LaborItem extends JobItem {
     public Employee getEmployee() {
         return employee;
     }
+
+    public int getUnitPrice(){
+        return employee.getRate();
+    }
 }
