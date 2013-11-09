@@ -12,14 +12,22 @@ public class Person {
     }
 
     public String getTelephoneNumber(){
-        return "(" + officeAreaCode + ")" + officeNumber;
+        return "(" + getOfficeAreaCode() + ")" + getOfficeNumber();
     }
 
     public String getOfficeAreaCode() {
-        return officeAreaCode;
+        return telephoneNumber.getOfficeAreaCode();
     }
 
     public String getOfficeNumber() {
         return officeNumber;
+    }
+
+    public void setOfficeAreaCode(String officeAreaCode) {
+        this.officeAreaCode = officeAreaCode;
+    }
+
+    public void setOfficeNumber(String officeNumber) {
+        this.officeNumber = officeNumber;
     }
 }
