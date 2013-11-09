@@ -14,4 +14,8 @@ public class TelephoneNumber {
     public String getOfficeNumber() {
         return officeNumber;
     }
+
+    public String getTelephoneNumber(){
+        return "(" + getOfficeAreaCode() + ")" + getOfficeNumber();
+    }
 }
