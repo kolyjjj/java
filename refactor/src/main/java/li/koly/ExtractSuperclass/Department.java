@@ -4,11 +4,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Department extends Party{
-    private final String name;
     private List<Employee> staff = new ArrayList();
 
     public Department(String name) {
-        this.name = name;
+        super(name);
     }
 
     public int getTotalAnnualCost() {
@@ -28,7 +27,4 @@ public class Department extends Party{
         return staff.size();
     }
 
-    public String getName() {
-        return name;
-    }
 }
