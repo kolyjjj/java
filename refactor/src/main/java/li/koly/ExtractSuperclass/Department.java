@@ -11,10 +11,10 @@ public class Department extends Party{
     }
 
     public int getAnnualCost() {
-        List<Employee> e = getStaff();
+        List<Party> parties = getStaff();
         int result = 0;
-        for (Employee employee : e) {
-            result += employee.getAnnualCost();
+        for (Party p : parties) {
+            result += p.getAnnualCost();
         }
         return result;
     }
