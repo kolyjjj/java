@@ -12,7 +12,7 @@ public class Person {
     }
 
     public String getTelephoneNumber(){
-        return "(" + getOfficeAreaCode() + ")" + getOfficeNumber();
+        return "(" + telephoneNumber.getOfficeAreaCode() + ")" + telephoneNumber.getOfficeNumber();
     }
 
     public String getOfficeAreaCode() {
@@ -20,7 +20,7 @@ public class Person {
     }
 
     public String getOfficeNumber() {
-        return officeNumber;
+        return telephoneNumber.getOfficeNumber();
     }
 
     public void setOfficeAreaCode(String officeAreaCode) {
