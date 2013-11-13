@@ -1,6 +1,8 @@
 package li.koly.ReplaceTypeCodeWithSubclasses;
 
 
+import li.koly.refactor.ReplaceTypeCodeWithSubclasses.Employee;
+import li.koly.refactor.ReplaceTypeCodeWithSubclasses.Manager;
 import org.junit.Test;
 
 import static org.hamcrest.CoreMatchers.is;
