@@ -9,7 +9,8 @@ public class GenericStack<E> {
     private int size = 0;
 
     public GenericStack() {
-        elements = new E[DEFAULT_SIZE];
+//        elements = new E[DEFAULT_SIZE];
+        elements = (E[])new Object[DEFAULT_SIZE];
     }
 
     public void push(E e){
