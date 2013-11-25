@@ -1,6 +1,7 @@
 package li.koly.EffectiveJava.favorGenericType;
 
 import java.util.Arrays;
+import java.util.EmptyStackException;
 
 public class StackUseObject {
     private static final int DEFAULT_INITIAL_SIZE = 16;
@@ -17,7 +18,11 @@ public class StackUseObject {
     }
 
     public Object pop(){
-        return elements[size--];
+        if (size == 0)
+            throw new EmptyStackException();
+        Object result = elements[--size];
+        elements[size] = null;
+        return result;
     }
 
     private void ensureCapacity() {
