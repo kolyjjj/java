@@ -8,6 +8,7 @@ public class GenericStack<E> {
     private E[] elements;
     private int size = 0;
 
+    @SuppressWarnings("unchecked")
     public GenericStack() {
 //        elements = new E[DEFAULT_SIZE];
         elements = (E[])new Object[DEFAULT_SIZE];
